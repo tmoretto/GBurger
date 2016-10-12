@@ -1,0 +1,44 @@
+<ion-view cache-view="false">
+    <ion-nav-title>
+        Finalizar Pedido
+    </ion-nav-title>
+    <ion-content class="scroll-content ionic-scroll has-tabs">
+        <div class="card">
+            <div class="item item-divider">
+                Total do Pedido: <span class="pedido-total"> R{{totalDoPedido | currency}} </span> 
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="item in itensPedido" >
+                    {{item.item}} <span class="pedido-qtde"> Qtde: {{item.qtde}} </span>
+                </ion-item>
+            </ion-list>        
+            <div class="item item-divider">
+                Preencha seus dados:
+            </div>
+            <div class="item item-text-wrap">
+                <div class="list">
+                
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Nome</span>
+                    <input type="text" ng-model="pedido.nome">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Endereço</span>
+                    <input type="text" ng-model="pedido.endereco">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Telefone</span>
+                    <input type="tel" ng-model="pedido.telefone">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" ng-model="pedido.email">
+                </label>
+                </div>              
+            </div>
+
+        </div>
+
+        <a class="button button-energized button-full" ng-click="finalizarPedido()">Enviar Pedido</a>
+    </ion-content>
+</ion-view>

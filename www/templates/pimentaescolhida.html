@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-nav-title>
+        Pimenta Escolhida
+    </ion-nav-title>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                {{pimentaEscolhida.nome}}
+            </div>
+            <div class="item item-image">
+                <img src="img/pimenta.png">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                    Quantidade
+                    </div>
+                    <select ng-model="qtdeSelecionada" ng-change="mudou(qtdeSelecionada)">
+                        <option ng-selected="true">1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </label>
+            </div>
+            <div class="item item-divider">
+                Preço: R{{pimentaEscolhidaTotal | currency}}
+            </div>
+        </div>
+
+        <a class="button button-energized button-full" ng-click="adicionarPimentaAoPedido(qtdeSelecionada)">Adicionar ao Pedido</a>
+        
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view>
+    <ion-nav-title>Giba Burger</ion-nav-title>
+    <ion-content>
+            <div class="item item-divider">
+                Simples
+            </div>        
+            <ion-list>
+                <ion-item ng-repeat="burger in listaDeBurgers | filter : 'Simples' " href="#/burgerescolhido/{{burger}}">
+                    {{burger.nome}} <span> R{{burger.preco | currency}} </span>
+
+                </ion-item>
+            </ion-list>
+            
+            <div class="item item-divider">
+                com Bacon
+            </div>        
+            <ion-list>
+                <ion-item ng-repeat="burger in listaDeBurgers | filter : 'Bacon' " href="#/burgerescolhido/{{burger}}">
+                    {{burger.nome}} <span> R{{burger.preco | currency}} </span>
+
+                </ion-item>
+            </ion-list>
+
+            <div class="item item-divider">
+                Recheados
+            </div>        
+            <ion-list>
+                <ion-item ng-repeat="burger in listaDeBurgers | filter : 'Recheados' " href="#/burgerescolhido/{{burger}}">
+                    {{burger.nome}} <span> R{{burger.preco | currency}} </span>
+
+                </ion-item>
+            </ion-list>
+            
+    </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view>
+    <ion-nav-title>Giba Burger</ion-nav-title>
+    <ion-content>
+            <div class="item item-divider">
+                Pimentas Artesanais
+            </div>
+                    
+            <ion-list>
+                <ion-item ng-repeat="pimenta in listaDePimentas" href="#/pimentaescolhida/{{pimenta}}">
+                    {{pimenta.nome}} <span> R{{pimenta.preco | currency}} </span>
+                </ion-item>
+            </ion-list>
+            
+    </ion-content>
+</ion-view>
