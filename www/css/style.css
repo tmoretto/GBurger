@@ -16,7 +16,7 @@
     float: right;     
 }
 
-.pedido-total, .pedido-qtde, .ion-minus, .ion-plus {
+.pedido-total, .pedido-qtde, .ion-chevron-up, .ion-chevron-down {
     float: right;
 }
 

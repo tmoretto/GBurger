@@ -1,14 +1,18 @@
 <ion-view>
     <ion-nav-title>Giba Burger</ion-nav-title>
     <ion-content class="scroll-content ionic-scroll  has-header has-tabs" overflow-scroll="false">
-
+        
+        <ion-icon name="arrow-dropdown"></ion-icon>
+        <ion-icon name="ios-list"></ion-icon>
             <ion-list>
                 <div ng-repeat="group in groups">
                     <ion-item class="item-stable"
                             ng-click="toggleGroup(group)"
                             ng-class="{active: isGroupShown(group)}">
-                      <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
-                    &nbsp;
+                        
+                        <i class="icon" ng-class="isGroupShown(group) ? 'icon ion-chevron-up' : 'icon ion-chevron-down'"></i>
+
+                        &nbsp;
                         {{group.name}}
                     </ion-item>
 
