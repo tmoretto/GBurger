@@ -1,8 +1,39 @@
 angular.module('starter').controller('ListagemController', function($scope, BurgerService){
     
+    $scope.groups = [];
+    $scope.groups[0] = {
+        name: "Simples",
+        show: false
+    };
+    $scope.groups[1] = {
+        name: "Com Bacon",
+        show: false
+    };
+    $scope.groups[2] = {
+        name: "Recheados",
+        show: false
+    };
+    
+    /*
+    * if given group is the selected group, deselect it
+    * else, select the given group
+    */
+    $scope.toggleGroup = function(group) {
+        if ($scope.isGroupShown(group)) {
+          $scope.shownGroup = null;
+        } else {
+          $scope.shownGroup = group;
+        }
+    };
+    $scope.isGroupShown = function(group) {
+        return $scope.shownGroup === group;
+    };
+
     BurgerService.obterBurgers().then(function(dados){
             $scope.listaDeBurgers = dados;
     });
+
+
 
 });
 

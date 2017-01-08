@@ -2,13 +2,18 @@
     <ion-nav-title>
         Pimenta Escolhida
     </ion-nav-title>
-    <ion-content>
+    <ion-content class="scroll-content ionic-scroll has-bottom-button" overflow-scroll="false">
         <div class="card">
             <div class="item item-divider">
                 {{pimentaEscolhida.nome}}
             </div>
             <div class="item item-image">
                 <img src="img/pimenta.png">
+                <div class="item item-text-wrap">
+                    This is a basic Card with some text.
+                    This is a basic Card with some text.
+                    This is a basic Card with some text.
+                </div>                
                 <label class="item item-input item-select">
                     <div class="input-label">
                     Quantidade
@@ -27,8 +32,13 @@
             </div>
         </div>
 
-        <a class="button button-energized button-full" ng-click="adicionarPimentaAoPedido(qtdeSelecionada)">Adicionar ao Pedido</a>
         
     </ion-content>
+
+    <div style="position: absolute; bottom: 39px; width: 100%">
+        <div style="text-align: center">
+            <a class="button button-energized button-full" ng-click="adicionarPimentaAoPedido(qtdeSelecionada)">Adicionar ao Pedido</a>
+        </div>
+    </div>    
 
 </ion-view>

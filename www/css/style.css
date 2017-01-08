@@ -2,6 +2,10 @@
     background-color: #ffc900;
 }
 
+.has-bottom-button {
+    bottom: 90px;
+}
+
 .burguer-escolhido-180g {
     text-align: left;
     margin-left: 12px !important;
@@ -12,10 +16,20 @@
     float: right;     
 }
 
-.pedido-total {
+.pedido-total, .pedido-qtde, .ion-minus, .ion-plus {
     float: right;
 }
 
-.pedido-qtde {
-    float: right;
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
 }
